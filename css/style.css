@@ -1,0 +1,288 @@
+:root {
+  --accent-color: #6640d3;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*HEADER*/
+header {
+  max-height: 300px;
+}
+.fonheader {
+  background-color: var(--accent-color);
+}
+
+.logo {
+  margin-top: 50px;
+}
+
+.socicons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.socicons a {
+  margin-left: 10px;
+  width: 90px;
+  height: 65px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.socicons a:hover {
+  transform: translateY(-10px);
+}
+.socicons a i {
+  font-size: 24px;
+  color: #000;
+}
+
+ul.header-menu {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+ul.header-menu li {
+  width: 190px;
+  height: 50px;
+  background-color: #d9d9d9;
+  text-align: center;
+  line-height: 50px;
+  transition: opacity 0.5s ease;
+}
+ul.header-menu li:hover {
+  opacity: 0.5;
+}
+ul.header-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/*CONTENT*/
+main {
+  margin-top: 80px;
+}
+article {
+  border-bottom: 2px dashed #dadada;
+  padding-bottom: 10px;
+}
+article:last-child {
+  border-bottom: none;
+}
+article + article {
+  margin-top: 30px;
+}
+h3.post-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+p.post {
+  font-size: 14px;
+}
+a.btnmore {
+  width: 200px;
+  height: 55px;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+/*SIDEBAR*/
+
+aside {
+  background-color: #d9d9d9;
+  padding-top: 80px;
+}
+.widget {
+  margin-top: 50px;
+  background-color: var(--accent-color);
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+h3.widget-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+ul.widget-list {
+  text-align: center;
+}
+ul.widget-list li a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+ul.widget-list li {
+  margin-top: 10px;
+  position: relative;
+}
+
+ul.widget-list li:before {
+  content: "\f02e";
+  position: absolute;
+  top: 0;
+  left: 35%;
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  color: #fff;
+}
+/*FOOTER*/
+.fonfooter {
+  min-height: 300px;
+  background-color: #000;
+  margin-top: 50px;
+}
+
+ul.footer-menu {
+  margin-top: 50px;
+}
+ul.footer-menu li {
+  margin-top: 10px;
+  position: relative;
+}
+ul.footer-menu li:before {
+  content: "\f058";
+  position: absolute;
+  top: 0;
+  left: -9%;
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  color: #fff;
+}
+ul.footer-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.copyright {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+.copyright img {
+  margin-right: 10px;
+}
+p.copy {
+  color: #fff;
+  font-weight: 400;
+  align-self: center;
+}
+
+/*BUTTON UP*/
+.up {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.up i {
+  color: #fff;
+}
+/*MEDIA QUERRIES*/
+
+@media screen and (max-width: 1400px) {
+  ul.header-menu li {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  ul.header-menu li a {
+    font-size: 16px;
+  }
+  ul.widget-list li:before {
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ul.header-menu li a {
+    font-size: 14px;
+  }
+
+  main {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .socicons {
+    margin-left: 50px;
+  }
+  .logo {
+    margin-left: 50px;
+  }
+  article {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  ul.footer-menu {
+    margin-left: 50px;
+  }
+  .copyright {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  ul.header-menu {
+    flex-direction: column;
+    margin-left: -18px;
+  }
+  ul.header-menu li {
+    width: 100%;
+    margin-top: 5px;
+  }
+  main {
+    margin-top: 400px;
+  }
+}
+@media screen and (max-width: 320px) {
+  ul.footer-menu li:before {
+    left: -15xp;
+    width: 50px;
+    height: 50px;
+  }
+  img.mini {
+    width: 100px;
+    height: 100px;
+  }
+}
